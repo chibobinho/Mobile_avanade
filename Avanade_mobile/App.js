@@ -1,110 +1,96 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
-import type {Node} from 'react';
+import React, { Component } from 'react';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
-  useColorScheme,
   View,
+  Image,
+  TouchableOpacity,
+  TextInput,
+  Button,
 } from 'react-native';
+import './assets/img/icon.png'
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      //nome: '',
+      Email: '',
+      base64: '',
+    };
+  }
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+  render() {
+    return (
+      <View style={styles.main}>
+        <View style={styles.mainDiv}>
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+          <Image source={require('')} style={styles.mainImagem} />
+          <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
+          <TextInput style={styles.mainInput}>Senha</TextInput>
+          <TouchableOpacity style={styles.mainBtn}>
+                <Text style={styles.mainBtnTexto}>Logar</Text>
+              </TouchableOpacity>
+          <Text style={styles.mainTexto}>Esqueceu sua senha?</Text>
+          <Text style={styles.mainTexto}>Não tem uma conta? Cadastre-se</Text>
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> 22222 
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
         </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+      </View >
+    );
+  }
+}
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  // conteúdo da main
+  main: {
+    flex: 1,
+    backgroundColor: 'aquamarine',
+    alignItems: 'center',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+
+  mainDiv: {
+    flex: 0.8,
+    backgroundColor: 'white',
+    height: 517,
+    alignItems: 'center',
+    justifyContent: 'space-around',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
+
+  mainImagem: {
+    width: 132,
+    height: 96,
   },
-  highlight: {
-    fontWeight: '700',
+
+  mainInput: {
+    width: 260,
+    height: 60,
+    backgroundColor: '#ffffff',
+    borderLeftWidth: 2,
+    borderRightWidth: 2,
+    borderTopWidth: 2,
+    borderBottomWidth: 2,
+    borderRadius: 5,
+    borderStyle: 'solid',
+    borderColor: '#F3BC2C',
+    paddingLeft: 23,
+  },
+
+  mainBtn: {
+    backgroundColor: '#F3BC2C',
+    width: 157,
+    height: 60,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  mainBtnTexto: {
+    fontSize: 14,
+    color: '#000000'
+  },
+
+  mainTexto: {
+    fontSize: 14,
+    color: '#000000'
   },
 });
 
