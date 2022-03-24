@@ -29,7 +29,7 @@ class Login extends Component {
         <View style={styles.mainDiv}>
 
           <View style={styles.mainImagemSpace}>
-            <Image style={styles.mainImagem} source={require('../../assets/img/icon.png')} />
+            <Image source={require('../../assets/img/icon.png')} style={styles.mainImagem}/>
           </View>
           <View style={styles.mainFormSpace}>
             <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
