@@ -62,6 +62,7 @@ class TrocaPontos extends Component {
               </TouchableOpacity>
             </View>
           </View>
+          
         </View>
       </View >
     );
