@@ -8,7 +8,9 @@ import {
   TextInput,
   Button,
 } from 'react-native';
-import './assets/img/icon.png'
+
+import Icone from './assets/img/icon.png';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,15 +26,23 @@ class App extends Component {
       <View style={styles.main}>
         <View style={styles.mainDiv}>
 
-          <Image source={require('')} style={styles.mainImagem} />
-          <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
-          <TextInput style={styles.mainInput}>Senha</TextInput>
-          <TouchableOpacity style={styles.mainBtn}>
-                <Text style={styles.mainBtnTexto}>Logar</Text>
-              </TouchableOpacity>
-          <Text style={styles.mainTexto}>Esqueceu sua senha?</Text>
-          <Text style={styles.mainTexto}>Não tem uma conta? Cadastre-se</Text>
+          <View style={styles.mainImagemSpace}>
+            <Image style={styles.mainImagem} source={require('./assets/img/Icone.png')} />
+          </View>
+          <View style={styles.mainFormSpace}>
+            <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
+            <TextInput style={styles.mainInput}>Senha</TextInput>
 
+            <TouchableOpacity style={styles.mainBtn}>
+              <Text style={styles.mainBtnTexto}>Logar</Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.mainTextoSpace}>
+
+            <Text style={styles.mainTexto}>Esqueceu sua senha?</Text>
+            <Text style={styles.mainTexto}>Não tem uma conta? Cadastre-se</Text>
+          </View>
         </View>
       </View >
     );
@@ -43,21 +53,37 @@ const styles = StyleSheet.create({
   // conteúdo da main
   main: {
     flex: 1,
-    backgroundColor: 'aquamarine',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
   },
 
   mainDiv: {
-    flex: 0.8,
+    flex: 0.9,
     backgroundColor: 'white',
     height: 517,
     alignItems: 'center',
     justifyContent: 'space-around',
   },
 
+  mainImagemSpace: {
+    width: 260,
+    height: 166,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
   mainImagem: {
+    marginTop: 20,
     width: 132,
     height: 96,
+  },
+
+  mainFormSpace: {
+    height: 240,
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 
   mainInput: {
@@ -85,7 +111,14 @@ const styles = StyleSheet.create({
 
   mainBtnTexto: {
     fontSize: 14,
+    fontStyle: 'bold',
     color: '#000000'
+  },
+
+  mainTextoSpace: {
+    height: 91,
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 
   mainTexto: {
