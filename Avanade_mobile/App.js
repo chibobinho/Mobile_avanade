@@ -26,23 +26,26 @@ class App extends Component {
       <View style={styles.main}>
         <View style={styles.mainDiv}>
 
-          <View style={styles.mainImagemSpace}>
-            <Image style={styles.mainImagem} source={require('./assets/img/Icone.png')} />
+          <View style={styles.mainTituloSpace}>
+            <Image style={styles.mainImagem} source={require('./assets/img/Icone_voltar.png')} />
+            <Text style={styles.mainTitulo}>Cadastro</Text>
           </View>
-          <View style={styles.mainFormSpace}>
-            <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
-            <TextInput style={styles.mainInput}>Senha</TextInput>
 
+          <View style={styles.mainFormSpace}>
+            <TextInput style={styles.mainInput}>Nome Completo</TextInput>
+            <TextInput style={styles.mainInput}>CPF</TextInput>
+            <TextInput style={styles.mainInput}>Endereço de e-mail</TextInput>
+            <TextInput style={styles.mainInput}>Senha</TextInput>
+            <TextInput style={styles.mainInput}>DD/MM/AAAA</TextInput>
             <TouchableOpacity style={styles.mainBtn}>
-              <Text style={styles.mainBtnTexto}>Logar</Text>
+              <Text style={styles.mainBtnTexto}>Cadastrar</Text>
             </TouchableOpacity>
           </View>
 
           <View style={styles.mainTextoSpace}>
-
-            <Text style={styles.mainTexto}>Esqueceu sua senha?</Text>
-            <Text style={styles.mainTexto}>Não tem uma conta? Cadastre-se</Text>
+            <Text style={styles.mainTexto}>Você será reencaminhado para a tela de login.</Text>
           </View>
+
         </View>
       </View >
     );
@@ -67,21 +70,30 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
 
-  mainImagemSpace: {
-    width: 260,
-    height: 166,
+  mainTituloSpace: {
+    width: 203,
+    height: 40,
+    display: 'flex',
+    flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    marginRight: 55,
   },
 
   mainImagem: {
-    marginTop: 20,
-    width: 132,
-    height: 96,
+    marginTop: 15,
+    width: 20,
+    height: 20,
+  },
+
+  mainTitulo: {
+    fontSize: 36,
+    color: '#000000',
   },
 
   mainFormSpace: {
-    height: 240,
+    marginTop: 25,
+    height: 490,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
@@ -111,12 +123,12 @@ const styles = StyleSheet.create({
 
   mainBtnTexto: {
     fontSize: 14,
-    fontStyle: 'bold',
     color: '#000000'
   },
 
   mainTextoSpace: {
-    height: 91,
+    marginTop: 20,
+    height: 16,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
