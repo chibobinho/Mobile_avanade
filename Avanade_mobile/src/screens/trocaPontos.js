@@ -42,8 +42,8 @@ class TrocaPontos extends Component {
 
             <View style={styles.cardPontos}>
               <View>
-                <Text style={styles.cardPontosText}>15 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$1,00</Text>
+                <Text style={styles.cardPontosText}>30 pontos</Text>
+                <Text style={styles.cardTextSaldo}>R$2,00</Text>
               </View>
 
               <TouchableOpacity style={styles.btnPontos}>
@@ -53,8 +53,19 @@ class TrocaPontos extends Component {
 
             <View style={styles.cardPontos}>
               <View>
-                <Text style={styles.cardPontosText}>15 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$1,00</Text>
+                <Text style={styles.cardPontosText}>45 pontos</Text>
+                <Text style={styles.cardTextSaldo}>R$3,00</Text>
+              </View>
+
+              <TouchableOpacity style={styles.btnPontos}>
+                <Text style={styles.cardPontosText}>Trocar</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={styles.cardPontos}>
+              <View>
+                <Text style={styles.cardPontosText}>60 pontos</Text>
+                <Text style={styles.cardTextSaldo}>R$4,00</Text>
               </View>
 
               <TouchableOpacity style={styles.btnPontos}>
@@ -62,7 +73,6 @@ class TrocaPontos extends Component {
               </TouchableOpacity>
             </View>
           </View>
-          
         </View>
       </View >
     );
@@ -72,12 +82,12 @@ class TrocaPontos extends Component {
 const styles = StyleSheet.create({
   // conteúdo da main
   main: {
-    flex: 1,
+    flex: 2,
     backgroundColor: '#F7F7F7',
   },
   // cabeçalho
   mainHeader: {
-    flex: 2,
+    flex: 1.5,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -101,15 +111,14 @@ const styles = StyleSheet.create({
   },
   // conteúdo do body
   mainBody: {
-    flex: 6,
+    flex: 5,
     alignItems: 'center',
   },
   // informações do usuário
   mainCards: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
-    backgroundColor: '#F3BC2C',
+    justifyContent: 'space-between',
+    paddingBottom: 80,
   },
 
   cardPontos: {

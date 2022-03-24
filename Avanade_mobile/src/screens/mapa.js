@@ -5,132 +5,59 @@ export default class Mapa extends Component {
   render() {
     return (
       <View style={styles.main}>
-        <View style={styles.mainHeader}>
-          <View style={styles.mainHeaderRow}>
-            <Text style={styles.mainHeaderText}>Trocar pontos</Text>
-          </View>
-          <View style={styles.mainHeaderLine} />
-        </View>
-
-        <View style={styles.mainBody}>
-
-          <View style={styles.mainCards}>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>15 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$1,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>30 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$2,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>45 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$3,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>60 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$4,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-      </View >
+        <Text>Mapa</Text>
+      </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  // conteúdo da main
   main: {
-    flex: 2,
+    flex: 5,
     backgroundColor: '#F7F7F7',
-  },
-  // cabeçalho
-  mainHeader: {
-    flex: 2,
-    justifyContent: 'center',
     alignItems: 'center',
   },
-  
-  mainHeaderRow: {
-    flexDirection: 'row',
-  },
-  // texto do cabeçalho
-  mainHeaderText: {
-    fontSize: 36,
-    color: 'rgba(51, 51, 51, 1)',
-    fontFamily: 'Open Sans',
+
+  titulo: {
+    fontSize: 34,
+    /* fontFamily: 'Open Sans', */
     fontWeight: 'bold',
-  },
-  // linha de separação do cabeçalho
-  mainHeaderLine: {
-    width: 155,
-    paddingTop: 12,
-    borderBottomColor: 'rgba(0, 0, 0, 1)',
-    borderBottomWidth: 1,
-  },
-  // conteúdo do body
-  mainBody: {
-    flex: 6,
-    alignItems: 'center',
-  },
-  // informações do usuário
-  mainCards: {
-    flex: 3,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
+    lineHeight: 39,
   },
 
-  cardPontos: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    width: 300,
-    height: 73,
-    backgroundColor: '#FFF',
+  selecaoVaga: {
+    backgroundColor: '#fff',
     borderColor: '#F3BC2C',
-    borderWidth: 2,
+    borderWidth: 3,
+    borderRadius: 16,
+    width: 242,
+    height: 122,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
-  cardPontosText: {
-    fontSize: 20,
-    fontFamily: 'Open Sans',
-    color: '#000',
+  numeroVaga: {
+    fontSize: 36,
+    /* fontFamily: 'Open Sans', */
   },
 
-  btnPontos: {
+  btnConfirmar: {
     backgroundColor: '#F3BC2C',
-    width: 116,
-    height: 37,
+    width: 157,
+    height: 60,
     borderRadius: 5,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  btnConfirmarTexto: {
+    /* fontFamily: 'Open Sans', */
+    fontWeight: 'bold',
+    fontSize: 24,
+  },
+
+  mainBodyImg: {
+    width: 231,
+    height: 168,
   },
 });

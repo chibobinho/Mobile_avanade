@@ -26,27 +26,43 @@ class Login extends Component {
   render() {
     return (
       <View style={styles.main}>
-        <View style={styles.mainDiv}>
+        <Image style={styles.imgPonto} source={require('../../assets/img/mapa.png')} />
 
-          <View style={styles.mainImagemSpace}>
-            <Image source={require('../../assets/img/icon.png')} style={styles.mainImagem}/>
+        <View style={styles.espacoTitulo}>
+          <Text style={styles.tituloBicicletario}>Bike Runners - Bike Shop</Text>
+        </View>
+
+        <View style={styles.infoBicicletario}>
+          <View>
+            <Text style={styles.tituloInfo}>Endereço:</Text>
+            <Text style={styles.textoInfo}>R. Emília Marengo, 320 - Tatuape, São Paulo - SP, 03336-000</Text>
           </View>
-          <View style={styles.mainFormSpace}>
-            <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
-            <TextInput style={styles.mainInput}>Senha</TextInput>
 
-            <TouchableOpacity style={styles.mainBtn} onPress={this.realizarLogin}>
-              <Text style={styles.mainBtnTexto}>Logar</Text>
+          <View>
+            <Text style={styles.tituloInfo}>Áreas atendidas</Text>
+            <Text style={styles.textoInfo}>São Paulo</Text>
+          </View>
+
+          <View>
+            <Text style={styles.tituloInfo}>Horas</Text>
+            <Text style={styles.textoInfo}>Aberto ⋅ Fecha às 19:00</Text>
+          </View>
+
+          <View>
+            <Text style={styles.tituloInfo}>Vagas</Text>
+            <Text style={styles.textoInfo}>
+              Disponiveis = 7
+              Totais = 15
+            </Text>
+          </View>
+
+          <View style={styles.btnPosicionamento}>
+            <TouchableOpacity style={styles.btnPonto}>
+              <Text style={styles.cardPontosText}>Estou no ponto</Text>
             </TouchableOpacity>
           </View>
-
-          <View style={styles.mainTextoSpace}>
-
-            <Text style={styles.mainTexto}>Esqueceu sua senha?</Text>
-            <Text style={styles.mainTexto}>Não tem uma conta? Cadastre-se</Text>
-          </View>
         </View>
-      </View >
+      </View>
     );
   }
 }
@@ -54,55 +70,48 @@ class Login extends Component {
 const styles = StyleSheet.create({
   // conteúdo da main
   main: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    display: 'flex',
-    justifyContent: 'center'
+    flex: 2,
+    backgroundColor: '#CECED7',
   },
 
-  mainDiv: {
-    flex: 0.9,
-    backgroundColor: 'white',
-    height: 517,
-    alignItems: 'center',
-    justifyContent: 'space-around',
+  imgPonto: {
+    height: 250,
   },
 
-  mainImagemSpace: {
-    width: 260,
-    height: 166,
+  espacoTitulo: {
+    height: 103,
+    borderRadius: 5,
+    /* shadowColor: '#000',
+    shadowOpacity: 'rgba(0, 0, 0, 0.4)', */
     alignItems: 'center',
     justifyContent: 'center',
   },
 
-  mainImagem: {
-    marginTop: 20,
-    width: 132,
-    height: 96,
+  tituloBicicletario: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    color: '#000'
   },
 
-  mainFormSpace: {
-    height: 240,
+  infoBicicletario: {
+    paddingLeft: 38,
+  },
+
+  tituloInfo: {
+    fontSize: 25,
+    color: '#000',
+  },
+
+  textoInfo: {
+
+  },
+
+  btnPosicionamento: {
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
   },
 
-  mainInput: {
-    width: 260,
-    height: 60,
-    backgroundColor: '#ffffff',
-    borderLeftWidth: 2,
-    borderRightWidth: 2,
-    borderTopWidth: 2,
-    borderBottomWidth: 2,
-    borderRadius: 5,
-    borderStyle: 'solid',
-    borderColor: '#F3BC2C',
-    paddingLeft: 23,
-  },
-
-  mainBtn: {
+  btnPonto: {
     backgroundColor: '#F3BC2C',
     width: 157,
     height: 60,
@@ -111,20 +120,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-  mainBtnTexto: {
-    fontSize: 14,
-    color: '#000000'
-  },
-
-  mainTextoSpace: {
-    height: 91,
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-
-  mainTexto: {
-    fontSize: 14,
-    color: '#000000'
+  cardPontosText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#000',
   },
 });
 
