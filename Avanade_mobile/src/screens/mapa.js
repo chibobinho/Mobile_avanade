@@ -1,136 +1,77 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Select, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Select, Image, TouchableOpacity, TextInput } from 'react-native';
 
 export default class Mapa extends Component {
   render() {
     return (
       <View style={styles.main}>
-        <View style={styles.mainHeader}>
-          <View style={styles.mainHeaderRow}>
-            <Text style={styles.mainHeaderText}>Trocar pontos</Text>
-          </View>
-          <View style={styles.mainHeaderLine} />
+        <View style={styles.mainMapa}>
+          
         </View>
 
-        <View style={styles.mainBody}>
-
-          <View style={styles.mainCards}>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>15 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$1,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
+        <View style={styles.mainNavegar}>
+          <View style={styles.mainMenuNavegar}>
+            <TextInput style={styles.mainMenuInput}>Para onde? <Image source={require('../../assets/img/Icone_lupa.png')} style={styles.mainImagem} /> </TextInput>
+            
             </View>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>30 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$2,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>45 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$3,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-
-            <View style={styles.cardPontos}>
-              <View>
-                <Text style={styles.cardPontosText}>60 pontos</Text>
-                <Text style={styles.cardTextSaldo}>R$4,00</Text>
-              </View>
-
-              <TouchableOpacity style={styles.btnPontos}>
-                <Text style={styles.cardPontosText}>Trocar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
         </View>
+
       </View >
     );
   }
 }
 
 const styles = StyleSheet.create({
-  // conteúdo da main
   main: {
-    flex: 2,
-    backgroundColor: '#F7F7F7',
-  },
-  // cabeçalho
-  mainHeader: {
-    flex: 2,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  
-  mainHeaderRow: {
-    flexDirection: 'row',
-  },
-  // texto do cabeçalho
-  mainHeaderText: {
-    fontSize: 36,
-    color: 'rgba(51, 51, 51, 1)',
-    fontFamily: 'Open Sans',
-    fontWeight: 'bold',
-  },
-  // linha de separação do cabeçalho
-  mainHeaderLine: {
-    width: 155,
-    paddingTop: 12,
-    borderBottomColor: 'rgba(0, 0, 0, 1)',
-    borderBottomWidth: 1,
-  },
-  // conteúdo do body
-  mainBody: {
-    flex: 6,
-    alignItems: 'center',
-  },
-  // informações do usuário
-  mainCards: {
-    flex: 3,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
+    flex: 1,
+    backgroundColor: '#ffffff',
   },
 
-  cardPontos: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    width: 300,
-    height: 73,
-    backgroundColor: '#FFF',
-    borderColor: '#F3BC2C',
-    borderWidth: 2,
-  },
-
-  cardPontosText: {
-    fontSize: 20,
-    fontFamily: 'Open Sans',
-    color: '#000',
-  },
-
-  btnPontos: {
-    backgroundColor: '#F3BC2C',
-    width: 116,
-    height: 37,
+  mainMapa: {
+    flex: 0.85,
+    backgroundColor: 'aquamarine',
+    width: 411,
     borderRadius: 5,
-    alignItems: 'center',
+  },
+
+  mainNavegar: {
+    flex: 0.15,
+    backgroundColor: '#ffffff',
+    display: 'flex',
     justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  mainMenuNavegar: {
+    width: 394,
+    height: 60,
+    backgroundColor: '#F3BC2C',
+    borderRadius: 5,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  mainMenuInput: {
+    width: 320,
+    height: 30,
+    backgroundColor: '#ffffff',
+    fontSize: 12,
+    borderRadius: 5,
+    borderColor: 'black',
+    borderWidth: 1,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingLeft: 23,
+    paddingTop: 0,
+  },
+
+  mainImagem: {
+    paddingLeft: 40,
+    width: 20,
+    height: 20,
   },
 });
