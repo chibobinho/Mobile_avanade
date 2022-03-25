@@ -11,7 +11,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const bottomTab = createBottomTabNavigator();
 
-import Mapa from './mapa';
+import Ponto from './ponto';
 import Perfil from './perfil';
 
 class Main extends Component {
@@ -24,11 +24,11 @@ class Main extends Component {
         />
 
         <bottomTab.Navigator
-          initialRouteName='Mapa'
+          initialRouteName='Ponto'
 
           screenOptions={({ route }) => ({
             tabBarIcon: () => {
-              if (route.name === 'Mapa') {
+              if (route.name === 'Ponto') {
                 return (
                   <View style={styles.iconNavegacao}>
                     <Image
@@ -65,7 +65,7 @@ class Main extends Component {
             }
           })}
         >
-          <bottomTab.Screen name="Mapa" component={Mapa} />
+          <bottomTab.Screen name="Ponto" component={Ponto} />
           <bottomTab.Screen name="Perfil" component={Perfil} />
         </bottomTab.Navigator>
 

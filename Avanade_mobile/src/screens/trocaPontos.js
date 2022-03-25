@@ -15,6 +15,10 @@ class TrocaPontos extends Component {
     };
   }
 
+  finalizarCadastro = () => {
+    navigation.goBack();
+  }
+  
   render() {
     return (
       <View style={styles.main}>
