@@ -29,8 +29,6 @@ class Cadastro extends Component {
         <View style={styles.mainDiv}>
 
           <View style={styles.mainTituloSpace}>
-
-
             <TouchableOpacity style={styles.mainBtnVoltar} onPress={this.finalizarCadastro}>
               <Image style={styles.mainImagem} source={require('../../assets/img/Icone_voltar.png')} />
             </TouchableOpacity>

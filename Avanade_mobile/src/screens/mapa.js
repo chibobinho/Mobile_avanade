@@ -6,13 +6,15 @@ export default class Mapa extends Component {
     return (
       <View style={styles.main}>
         <View style={styles.mainMapa}>
-          
+
         </View>
 
         <View style={styles.mainNavegar}>
           <View style={styles.mainMenuNavegar}>
-            <TextInput style={styles.mainMenuInput}>Para onde? <Image source={require('../../assets/img/Icone_lupa.png')} style={styles.mainImagem} /> </TextInput>
+            <View style={styles.mainDividir}>
+              <TextInput style={styles.mainMenuInput}>Para onde? <Image source={require('../../assets/img/Icone_lupa.png')} style={styles.mainImagem} /> </TextInput>
             </View>
+          </View>
         </View>
 
       </View >
@@ -28,15 +30,16 @@ const styles = StyleSheet.create({
 
   mainMapa: {
     flex: 0.85,
-    backgroundColor: 'aquamarine',
     width: 411,
     borderRadius: 5,
+    borderWidth: 2,
+    backgroundColor: '#ffffff',
+    borderColor: '#000000',
   },
 
   mainNavegar: {
     flex: 0.15,
-    backgroundColor: '#ffffff',
-    display: 'flex',
+    backgroundColor: 'aquamarine',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -44,29 +47,32 @@ const styles = StyleSheet.create({
   mainMenuNavegar: {
     width: 394,
     height: 60,
-    backgroundColor: '#F3BC2C',
     borderRadius: 5,
-    // display: 'flex',
-    // flexDirection: 'row',
-    // justifyContent: 'center',
-    // alignItems: 'center',
+    backgroundColor: '#F3BC2C',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  mainDividir: {
+    width: 394,
+    height: 60,
+    justifyContent: 'space-between',
   },
 
   mainMenuInput: {
     width: 320,
     height: 30,
-    backgroundColor: '#ffffff',
+    paddingLeft: 23,
+    paddingTop: 0,
     fontSize: 12,
     borderRadius: 5,
-    borderColor: 'black',
     borderWidth: 1,
+    borderColor: '#000000',
+    backgroundColor: '#ffffff',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // alignItems:
-    paddingLeft: 23,
-    paddingTop: 0,
-    marginTop: 0,
+    textAlign: 'justify',
   },
 
   mainImagem: {
