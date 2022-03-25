@@ -12,7 +12,6 @@ export default class Mapa extends Component {
         <View style={styles.mainNavegar}>
           <View style={styles.mainMenuNavegar}>
             <TextInput style={styles.mainMenuInput}>Para onde? <Image source={require('../../assets/img/Icone_lupa.png')} style={styles.mainImagem} /> </TextInput>
-            
             </View>
         </View>
 
@@ -47,10 +46,10 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: '#F3BC2C',
     borderRadius: 5,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // display: 'flex',
+    // flexDirection: 'row',
+    // justifyContent: 'center',
+    // alignItems: 'center',
   },
 
   mainMenuInput: {
@@ -64,13 +63,13 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    // alignItems:
     paddingLeft: 23,
     paddingTop: 0,
+    marginTop: 0,
   },
 
   mainImagem: {
-    paddingLeft: 40,
     width: 20,
     height: 20,
   },

@@ -9,7 +9,7 @@ import {
   Button,
 } from 'react-native';
 
-class App extends Component {
+class Cadastro extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,23 +19,31 @@ class App extends Component {
     };
   }
 
+  finalizarCadastro = () => {
+    this.props.navigation.navigate('Login');
+  }
+
   render() {
     return (
       <View style={styles.main}>
         <View style={styles.mainDiv}>
 
           <View style={styles.mainTituloSpace}>
-            <Image style={styles.mainImagem} source={require('./assets/img/icon_voltar.png')} />
+
+
+            <TouchableOpacity style={styles.mainBtnVoltar} onPress={this.finalizarCadastro}>
+              <Image style={styles.mainImagem} source={require('../../assets/img/Icone_voltar.png')} />
+            </TouchableOpacity>
             <Text style={styles.mainTitulo}>Cadastro</Text>
           </View>
 
           <View style={styles.mainFormSpace}>
-            <TextInput style={styles.mainInput}>Nome Completo</TextInput>
-            <TextInput style={styles.mainInput}>CPF</TextInput>
-            <TextInput style={styles.mainInput}>Endereço de e-mail</TextInput>
-            <TextInput style={styles.mainInput}>Senha</TextInput>
-            <TextInput style={styles.mainInput}>DD/MM/AAAA</TextInput>
-            <TouchableOpacity style={styles.mainBtn}>
+            <TextInput style={styles.mainInput} placeholder='Nome Completo' placeholderTextColor='#000000'></TextInput>
+            <TextInput style={styles.mainInput} placeholder='CPF' placeholderTextColor='#000000'></TextInput>
+            <TextInput style={styles.mainInput} placeholder='Endereço de e-mail' placeholderTextColor='#000000'></TextInput>
+            <TextInput style={styles.mainInput} placeholder='Senha' placeholderTextColor='#000000'></TextInput>
+            <TextInput style={styles.mainInput} placeholder='DD/MM/AAAA' placeholderTextColor='#000000'></TextInput>
+            <TouchableOpacity style={styles.mainBtn} onPress={this.finalizarCadastro}>
               <Text style={styles.mainBtnTexto}>Cadastrar</Text>
             </TouchableOpacity>
           </View>
@@ -119,6 +127,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+  mainBtnVoltar: {
+    width: 20,
+    height: 20,
+  },
+
   mainBtnTexto: {
     fontSize: 14,
     color: '#000000'
@@ -137,4 +150,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Cadastro;

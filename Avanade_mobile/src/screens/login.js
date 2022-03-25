@@ -23,6 +23,10 @@ class Login extends Component {
     this.props.navigation.navigate('Main');
   }
 
+  realizarCadastro = () => {
+    this.props.navigation.navigate('Cadastro');
+  }
+
   render() {
     return (
       <View style={styles.main}>
@@ -32,8 +36,8 @@ class Login extends Component {
             <Image source={require('../../assets/img/icon.png')} style={styles.mainImagem}/>
           </View>
           <View style={styles.mainFormSpace}>
-            <TextInput style={styles.mainInput}>Endereço de E-mail</TextInput>
-            <TextInput style={styles.mainInput}>Senha</TextInput>
+            <TextInput style={styles.mainInput} placeholder='Endereço de E-mail' placeholderTextColor='#000000'></TextInput>
+            <TextInput style={styles.mainInput} placeholder='Senha' placeholderTextColor='#000000'></TextInput>
 
             <TouchableOpacity style={styles.mainBtn} onPress={this.realizarLogin}>
               <Text style={styles.mainBtnTexto}>Logar</Text>
@@ -43,7 +47,9 @@ class Login extends Component {
           <View style={styles.mainTextoSpace}>
 
             <Text style={styles.mainTexto}>Esqueceu sua senha?</Text>
+            <TouchableOpacity style={styles.mainBtnCadastro} onPress={this.realizarCadastro}>
             <Text style={styles.mainTexto}>Não tem uma conta? Cadastre-se</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View >

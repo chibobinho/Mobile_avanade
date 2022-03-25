@@ -9,6 +9,7 @@ import {StatusBar, StyleSheet} from 'react-native';
 
 import Main from './src/screens/main';
 import Login from './src/screens/login';
+import Cadastro from './src/screens/cadastro';
 
 const AuthStack = createStackNavigator();
 
@@ -24,6 +25,7 @@ class App extends Component {
             headerShown: false,
           }}>
           <AuthStack.Screen name="Login" component={Login} />
+          <AuthStack.Screen name="Cadastro" component={Cadastro} />
           <AuthStack.Screen name="Main" component={Main} />
         </AuthStack.Navigator>
       </NavigationContainer>
