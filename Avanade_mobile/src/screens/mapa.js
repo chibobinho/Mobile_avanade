@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'reac
 export default class Mapa extends Component {
 
   realizarBusca = () => {
-    this.props.navigation.navigate('Pesquisa');
+    this.props.navigation.navigate('Pagamento');
   }
 
   render() {
