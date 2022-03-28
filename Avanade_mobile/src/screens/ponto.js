@@ -9,12 +9,21 @@ import {
 } from 'react-native';
 
 class Ponto extends Component {
+  voltarNavegacao = async () => {
+    this.props.navigation.navigate('Mapa');
+  }
 
+  goBack = () => {
+    navigation.goBack();
+  }
+  
   render() {
     return (
       <View style={styles.main}>
         <ImageBackground style={[styles.imgPonto]} source={require('../../assets/img/mapa.png')}>
-          <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
+          <TouchableOpacity style={styles.mainBtnVoltar} onPress={this.voltarNavegacao}>
+            <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
+          </TouchableOpacity>
         </ImageBackground>
 
         <View style={styles.mainBody}>
