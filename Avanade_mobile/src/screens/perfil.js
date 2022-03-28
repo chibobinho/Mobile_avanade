@@ -12,7 +12,7 @@ export default class Perfil extends Component {
   }
 
   navegarPontos = async () => {
-    this.props.navigation.navigate('TrocaPontos');
+    this.props.navigation.navigate('Pagamento');
   }
 
   render() {
