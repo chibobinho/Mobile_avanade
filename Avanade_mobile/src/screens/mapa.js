@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
 
 export default class Mapa extends Component {
+
+  realizarBusca = () => {
+    this.props.navigation.navigate('Pesquisa');
+  }
+
   render() {
     return (
       <View style={styles.main}>
@@ -12,6 +17,9 @@ export default class Mapa extends Component {
         <View style={styles.mainNavegar}>
           <View style={styles.mainMenuNavegar}>
             <View style={styles.mainDividir}>
+              <TouchableOpacity style={styles.mainBtn} onPress={this.realizarBusca}>
+                <Text style={styles.mainBtnTexto}>Pesquisa</Text>
+              </TouchableOpacity>
               <TextInput style={styles.mainMenuInput}>Para onde? <Image source={require('../../assets/img/Icone_lupa.png')} style={styles.mainImagem} /> </TextInput>
             </View>
           </View>
@@ -24,40 +32,9 @@ export default class Mapa extends Component {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 5,
+    flex: 1,
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
-  },
-
-  titulo: {
-    fontSize: 34,
-    /* fontFamily: 'Open Sans', */
-    fontWeight: 'bold',
-    lineHeight: 39,
-  },
-
-  selecaoVaga: {
-    backgroundColor: '#fff',
-    borderColor: '#F3BC2C',
-    borderWidth: 3,
-    borderRadius: 16,
-    width: 242,
-    height: 122,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  numeroVaga: {
-    fontSize: 36,
-    /* fontFamily: 'Open Sans', */
-  },
-
-  btnConfirmar: {
-    backgroundColor: '#F3BC2C',
-    width: 157,
-    height: 60,
-    flex: 1,
-    backgroundColor: '#ffffff',
   },
 
   mainMapa: {
@@ -71,7 +48,7 @@ const styles = StyleSheet.create({
 
   mainNavegar: {
     flex: 0.15,
-    backgroundColor: '#ffffff',
+    backgroundColor: '#F7F7F7',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -106,16 +83,5 @@ const styles = StyleSheet.create({
   mainImagem: {
     width: 20,
     height: 20,
-  },
-
-  btnConfirmarTexto: {
-    /* fontFamily: 'Open Sans', */
-    fontWeight: 'bold',
-    fontSize: 24,
-  },
-
-  mainBodyImg: {
-    width: 231,
-    height: 168,
   },
 });
