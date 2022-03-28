@@ -3,36 +3,36 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
   TouchableOpacity,
 } from 'react-native';
 
 class TrocaPontos extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      Email: '',
-      base64: '',
-    };
+  /* voltarNavegacao = () => {
+    navigation.goBack();
+  } */
+
+  voltarNavegacao = async () => {
+    this.props.navigation.navigate('Perfil');
   }
 
-  finalizarCadastro = () => {
-    navigation.goBack();
-  }
-  
   render() {
     return (
       <View style={styles.main}>
         <View style={styles.mainHeader}>
-          <View style={styles.mainHeaderRow}>
+          <View style={styles.mainTituloSpace}>
+            <TouchableOpacity onPress={this.voltarNavegacao}>
+              <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
+              {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} />  */}
+            </TouchableOpacity>
             <Text style={styles.mainHeaderText}>Trocar pontos</Text>
           </View>
+
           <View style={styles.mainHeaderLine} />
         </View>
 
         <View style={styles.mainBody}>
-
           <View style={styles.mainCards}>
-
             <View style={styles.cardPontos}>
               <View>
                 <Text style={styles.cardPontosText}>15 pontos</Text>
@@ -84,45 +84,54 @@ class TrocaPontos extends Component {
 }
 
 const styles = StyleSheet.create({
-  // conteúdo da main
   main: {
-    flex: 2,
+    flex: 1,
     backgroundColor: '#F7F7F7',
   },
-  // cabeçalho
+
   mainHeader: {
-    flex: 1.5,
+    flex: 0.90,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  
-  mainHeaderRow: {
+
+  mainTituloSpace: {
+    width: 370,
+    display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    marginRight: 75,
   },
-  // texto do cabeçalho
+
+  mainBtnVoltar: {
+    width: 20,
+    height: 20,
+  },
+
   mainHeaderText: {
+    //fontFamily: '',
     fontSize: 36,
-    color: 'rgba(51, 51, 51, 1)',
-    fontFamily: 'Open Sans',
     fontWeight: 'bold',
+    color: '#333',
   },
-  // linha de separação do cabeçalho
+
   mainHeaderLine: {
     width: 155,
-    paddingTop: 12,
-    borderBottomColor: 'rgba(0, 0, 0, 1)',
+    paddingTop: 8,
+    borderBottomColor: '#000',
     borderBottomWidth: 1,
   },
-  // conteúdo do body
+
   mainBody: {
-    flex: 5,
+    flex: 4,
     alignItems: 'center',
   },
-  // informações do usuário
+
   mainCards: {
     flex: 1,
     justifyContent: 'space-between',
-    paddingBottom: 80,
+    paddingBottom: 220,
   },
 
   cardPontos: {
@@ -138,8 +147,14 @@ const styles = StyleSheet.create({
 
   cardPontosText: {
     fontSize: 20,
-    fontFamily: 'Open Sans',
+    //fontFamily: '',
     color: '#000',
+  },
+
+  cardTextSaldo: {
+    fontSize: 14,
+    //fontFamily: '',
+    color: '#333',
   },
 
   btnPontos: {
