@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   ImageBackground,
+  SafeAreaView,
   ScrollView,
 } from 'react-native';
 
@@ -14,7 +15,7 @@ class Ponto extends Component {
     this.props.navigation.goBack();
   }
 
-  navegacaoVaga = () => {
+  navegarVaga = () => {
     this.props.navigation.navigate('Vaga');
   }
 
@@ -59,7 +60,7 @@ class Ponto extends Component {
               </View>
 
               <View style={styles.btnPosicionamento}>
-                <TouchableOpacity style={styles.btnPonto} onPress={this.navegacaoVaga}>
+                <TouchableOpacity style={styles.btnPonto} onPress={this.navegarVaga}>
                   <Text style={styles.cardPontosText}>Estou no ponto</Text>
                 </TouchableOpacity>
               </View>
@@ -126,7 +127,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-evenly',
     paddingBottom: 20,
-    paddingTop: 20,
   },
   tituloInfo: {
     //fontFamily: '',
