@@ -74,8 +74,8 @@ const styles = StyleSheet.create({
   mainBtnVoltar: {
     width: 20,
     height: 20,
-    marginLeft: 25,
-    marginTop: 10
+    marginLeft: 13,
+    marginTop: 7,
   },
 
   imgPonto: {
