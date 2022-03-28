@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
 
   mainNavegar: {
     flex: 0.15,
-    backgroundColor: 'aquamarine',
+    backgroundColor: '#ffffff',
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -49,14 +49,13 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 5,
     backgroundColor: '#F3BC2C',
-    justifyContent: 'center',
-    alignItems: 'center',
   },
 
   mainDividir: {
     width: 394,
     height: 60,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
   mainMenuInput: {
@@ -67,12 +66,9 @@ const styles = StyleSheet.create({
     fontSize: 12,
     borderRadius: 5,
     borderWidth: 1,
+    borderStyle: 'solid',
     borderColor: '#000000',
     backgroundColor: '#ffffff',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    textAlign: 'justify',
   },
 
   mainImagem: {
