@@ -8,12 +8,8 @@ import {
 } from 'react-native';
 
 class TrocaPontos extends Component {
-  /* voltarNavegacao = () => {
-    navigation.goBack();
-  } */
-
-  voltarNavegacao = async () => {
-    this.props.navigation.navigate('Perfil');
+  goBack = () => {
+    this.props.navigation.goBack();
   }
 
   render() {
@@ -21,9 +17,8 @@ class TrocaPontos extends Component {
       <View style={styles.main}>
         <View style={styles.mainHeader}>
           <View style={styles.mainTituloSpace}>
-            <TouchableOpacity onPress={this.voltarNavegacao}>
+            <TouchableOpacity onPress={this.goBack}>
               <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
-              {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} />  */}
             </TouchableOpacity>
             <Text style={styles.mainHeaderText}>Trocar pontos</Text>
           </View>
@@ -88,52 +83,44 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F7F7F7',
   },
-
   mainHeader: {
-    flex: 0.90,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   mainTituloSpace: {
-    width: 370,
+    width: 300,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    marginRight: 75,
+    marginRight: 40,
   },
-
   mainBtnVoltar: {
     width: 20,
     height: 20,
   },
-
   mainHeaderText: {
     //fontFamily: '',
     fontSize: 36,
     fontWeight: 'bold',
     color: '#333',
   },
-
   mainHeaderLine: {
     width: 155,
     paddingTop: 8,
     borderBottomColor: '#000',
     borderBottomWidth: 1,
   },
-
   mainBody: {
-    flex: 4,
+    flex: 5,
     alignItems: 'center',
   },
-
   mainCards: {
     flex: 1,
-    justifyContent: 'space-between',
-    paddingBottom: 220,
+    justifyContent: 'space-evenly',
+    paddingBottom: 150,
   },
-
   cardPontos: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -144,19 +131,16 @@ const styles = StyleSheet.create({
     borderColor: '#F3BC2C',
     borderWidth: 2,
   },
-
   cardPontosText: {
     fontSize: 20,
     //fontFamily: '',
     color: '#000',
   },
-
   cardTextSaldo: {
     fontSize: 14,
     //fontFamily: '',
     color: '#333',
   },
-
   btnPontos: {
     backgroundColor: '#F3BC2C',
     width: 116,

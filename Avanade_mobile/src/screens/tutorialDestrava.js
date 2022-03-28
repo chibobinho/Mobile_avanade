@@ -2,20 +2,16 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Select, Image, TouchableOpacity } from 'react-native';
 
 export default class TutorialDestrava extends Component {
-  /* voltarNavegacao = () => {
-    navigation.goBack();
-  } */
-
-  navegarVaga = async () => {
-    this.props.navigation.navigate('Vaga');
+  goBack = () => {
+    this.props.navigation.goBack();
   }
-
+  
   render() {
     return (
       <View style={styles.main}>
         <View style={styles.mainHeader}>
           <View style={styles.mainTituloSpace}>
-            <TouchableOpacity onPress={this.navegarPonto}>
+            <TouchableOpacity onPress={this.goBack}>
               <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
               {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} /> */}
             </TouchableOpacity>
@@ -74,69 +70,58 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#676A69',
   },
-
   mainHeader: {
     flex: 1.5,
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   mainTituloSpace: {
-    width: 340,
+    width: 300,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    marginRight: 110,
+    marginRight: 100,
   },
-
   mainBtnVoltar: {
     width: 20,
     height: 20,
   },
-
   mainHeaderText: {
     //fontFamily:
     fontSize: 36,
     fontWeight: 'bold',
     color: '#fff',
   },
-
   mainBody: {
     flex: 4,
     justifyContent: 'space-around',
     marginBottom: 110,
   },
-
   mainBodyTitle: {
     //fontFamily:
     fontSize: 25,
     fontWeight: 'bold',
     color: '#fff',
   },
-
   mainBodyIntrucoes: {
     maxWidth: 264,
     marginLeft: 20,
     marginBottom: 20,
   },
-
   mainBodyText: {
     //fontFamily:
     fontSize: 20,
     color: '#fff',
   },
-
   mainBodyPassos: {
-    maxWidth: 337,
+    maxWidth: 300,
     marginRight: 20,
   },
-
   passoInfo: {
     flexDirection: 'row',
     marginTop: 10,
   },
-
   mainBodyCircle: {
     width: 29,
     height: 31,
@@ -145,7 +130,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginRight: 7,
   },
-
   mainFooter: {
     flex: 1.5,
     width: '100%',
@@ -153,7 +137,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
   },
-
   mainFooterBtn: {
     width: 327,
     height: 54,
@@ -161,7 +144,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  
   footerBtnShadow: {
     shadowColor: '#rgba(0, 0, 0, 0.25)',
     shadowOffset: {width: -3, height: -4},
@@ -172,14 +154,12 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
     shadowRadius: 4, */
   },
-
   footerBtnText: {
     //fontFamily:
     fontSize: 24,
     fontWeight: 'bold',
     color: '#000',
   },
-
   mainFooterMinutes: {
     width: 109,
     height: 35,
@@ -187,7 +167,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   footerMinutesText: {
     //fontFamily:
     fontSize: 18,

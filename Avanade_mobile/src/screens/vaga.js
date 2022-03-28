@@ -2,27 +2,20 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Select, Image, TouchableOpacity } from 'react-native';
 
 export default class Vaga extends Component {
-  /* voltarNavegacao = () => {
-    navigation.goBack();
-  } */
-
-  navegarPonto = async () => {
-    this.props.navigation.navigate('Ponto');
+  goBack = () => {
+    this.props.navigation.goBack();
   }
-
+  
   render() {
     return (
       <View style={styles.main}>
         <View style={styles.mainHeader}>
           <View style={styles.mainTituloSpace}>
-
-            <TouchableOpacity style={styles.btnVoltarSpace}  onPress={this.navegarPonto}>
-              {/* <Image style={styles.mainImagem} source={require('../../assets/img/Icone_voltar.png')} /> */}
-              <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} />
+            <TouchableOpacity style={styles.btnVoltarSpace}  onPress={this.goBack}>
+              <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
             </TouchableOpacity>
 
-            {/* Image source={require('./assets/logo.png')} style={styles.mainBodyImg} /> */}
-            <Image style={styles.mainLogo} source={require('./assets/logo.png')} />
+            <Image style={styles.mainLogo} source={require('../../assets/img/icon.png')} />
           </View>
         </View>
 
@@ -48,13 +41,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#F7F7F7',
     alignItems: 'center',
   },
-
   mainHeader: {
     flex: 1.5,
     justifyContent: 'center',
     alignItems: 'center',
   },
-
   mainTituloSpace: {
     width: 200,
     display: 'flex',
@@ -63,29 +54,24 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     marginRight: 80,
   },
-
   mainBtnVoltar: {
     width: 20,
     height: 20,
   },
-
   btnVoltarSpace: {
     marginBottom: 80,
     marginRight: 60,
   },
-
   mainLogo: {
     width: 231,
     height: 168,
   },
-
   mainBody: {
     flex: 3,
     alignItems: 'center',
     justifyContent: 'space-evenly',
     paddingBottom: 80,
   },
-
   titulo: {
     fontSize: 34,
     /* fontFamily: 'Open Sans', */
@@ -95,7 +81,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
   },
-
   selecaoVaga: {
     backgroundColor: '#fff',
     borderColor: '#F3BC2C',
@@ -106,12 +91,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   numeroVaga: {
     fontSize: 36,
     /* fontFamily: 'Open Sans', */
   },
-
   btnConfirmar: {
     backgroundColor: '#F3BC2C',
     width: 157,
@@ -120,7 +103,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   btnConfirmarTexto: {
     /* fontFamily: 'Open Sans', */
     fontWeight: 'bold',

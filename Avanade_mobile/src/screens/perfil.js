@@ -12,29 +12,14 @@ export default class Perfil extends Component {
   }
 
   trocaPontos = async () => {
-    this.props.navigation.navigate('TrocaPontos');
-  }
-
-  finalizarCadastro = () => {
-    navigation.goBack();
+    this.props.navigation.navigate('Vaga');
   }
 
   render() {
     return (
       <View style={styles.main}>
         <View style={styles.mainHeader}>
-          <View style={styles.mainTituloSpace}>
-            <TouchableOpacity style={styles.mainBtnVoltar} onPress={this.finalizarCadastro}>
-              <Image style={styles.mainImagem} source={require('../../assets/img/Icone_voltar.png')} />
-            </TouchableOpacity>
-            <Text style={styles.mainHeaderText}>Perfil</Text>
-          </View>
-          {/* <View style={styles.mainHeaderRow}>
-            <TouchableOpacity style={styles.mainBtnVoltar} onPress={this.finalizarCadastro}>
-              <Image style={styles.imgVoltar} source={require('../../assets/img/Icone_voltar.png')} />
-            </TouchableOpacity>
-            <Text style={styles.mainHeaderText}>Perfil</Text>
-          </View> */}
+          <Text style={styles.mainHeaderText}>Perfil</Text>
           <View style={styles.mainHeaderLine} />
         </View>
 
@@ -68,32 +53,28 @@ const styles = StyleSheet.create({
     flex: 3,
     backgroundColor: '#fff',
   },
-  // cabeçalho
   mainHeader: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  // texto do cabeçalho
   mainHeaderText: {
+    //fontFamily: '',
     fontSize: 36,
     fontWeight: 'bold',
     color: '#333',
   },
-  // linha de separação do cabeçalho
   mainHeaderLine: {
     width: 155,
     paddingTop: 8,
     borderBottomColor: '#000',
     borderBottomWidth: 1,
-  },
-  // conteúdo do body
+  }, 
   mainBody: {
     flex: 5,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  // informações do usuário
   mainBodyInfo: {
     alignItems: 'center',
   },
@@ -104,6 +85,7 @@ const styles = StyleSheet.create({
     /* marginBottom: 20, */
   },
   mainBodyTitle: {
+    //fontFamily: '',
     color: '#000',
     fontSize: 25,
     fontWeight: 'bold',
@@ -120,7 +102,6 @@ const styles = StyleSheet.create({
     borderBottomColor: '#000',
     borderBottomWidth: 1,
   },
-  // botão de logout
   btn: {
     marginTop: '7%',
     alignItems: 'center',
@@ -130,19 +111,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#F3BC2C',
     borderRadius: 5,
   },
-  // texto do botão
   btnPontosText: {
+    //fontFamily: '',
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000',
+    textAlign: 'center',
   },
-  // texto do botão
   btnLogoutText: {
+    //fontFamily: '',
     fontSize: 25,
     fontWeight: 'bold',
     color: '#000',
   },
-
   mainTituloSpace: {
     width: 200,
     height: 45,
@@ -159,5 +140,4 @@ const styles = StyleSheet.create({
   mainImagem: {
     marginTop: 5,
   },
-
 });

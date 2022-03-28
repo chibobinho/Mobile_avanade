@@ -10,6 +10,9 @@ import {StatusBar, StyleSheet} from 'react-native';
 import Main from './src/screens/main';
 import Login from './src/screens/login';
 import TrocaPontos from './src/screens/trocaPontos';
+import TutorialDestrava from './src/screens/tutorialDestrava';
+import TutorialTrava from './src/screens/tutorialTrava';
+import Vaga from './src/screens/vaga';
 
 const AuthStack = createStackNavigator();
 
@@ -26,6 +29,9 @@ class App extends Component {
           }}>
           <AuthStack.Screen name="Login" component={Login} />
           <AuthStack.Screen name="TrocaPontos" component={TrocaPontos} />
+          <AuthStack.Screen name="TutorialTrava" component={TutorialTrava} />
+          <AuthStack.Screen name="TutorialDestrava" component={TutorialDestrava} />
+          <AuthStack.Screen name="Vaga" component={Vaga} />
           <AuthStack.Screen name="Main" component={Main} />
         </AuthStack.Navigator>
       </NavigationContainer>

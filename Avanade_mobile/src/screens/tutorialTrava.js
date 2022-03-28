@@ -2,12 +2,8 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, Select, Image, TouchableOpacity } from 'react-native';
 
 export default class TutorialTrava extends Component {
-  /* voltarNavegacao = () => {
-    navigation.goBack();
-  } */
-
-  navegarVaga = async () => {
-    this.props.navigation.navigate('Vaga');
+  goBack = () => {
+    this.props.navigation.goBack();
   }
 
   render() {
@@ -15,7 +11,7 @@ export default class TutorialTrava extends Component {
       <View style={styles.main}>
         <View style={styles.mainHeader}>
           <View style={styles.mainTituloSpace}>
-            <TouchableOpacity onPress={this.navegarPonto}>
+            <TouchableOpacity onPress={this.goBack}>
               <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
               {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} /> */}
             </TouchableOpacity>
@@ -82,12 +78,12 @@ const styles = StyleSheet.create({
   },
 
   mainTituloSpace: {
-    width: 340,
+    width: 300,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    marginRight: 110,
+    marginRight: 100,
   },
 
   mainBtnVoltar: {
@@ -128,7 +124,7 @@ const styles = StyleSheet.create({
   },
 
   mainBodyPassos: {
-    maxWidth: 337,
+    maxWidth: 300,
     marginRight: 20,
   },
 

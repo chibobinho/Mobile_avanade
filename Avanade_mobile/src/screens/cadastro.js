@@ -10,14 +10,6 @@ import {
 } from 'react-native';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      //nome: '',
-      Email: '',
-      base64: '',
-    };
-  }
 
   render() {
     return (
@@ -51,7 +43,6 @@ class App extends Component {
 }
 
 const styles = StyleSheet.create({
-  // conteúdo da main
   main: {
     flex: 1,
     backgroundColor: '#ffffff',
@@ -59,7 +50,6 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center'
   },
-
   mainDiv: {
     flex: 0.9,
     backgroundColor: 'white',
@@ -67,7 +57,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around',
   },
-
   mainTituloSpace: {
     width: 203,
     height: 40,
@@ -77,25 +66,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginRight: 55,
   },
-
   mainImagem: {
     marginTop: 15,
     width: 20,
     height: 20,
   },
-
   mainTitulo: {
     fontSize: 36,
     color: '#000000',
   },
-
   mainFormSpace: {
     marginTop: 25,
     height: 490,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-
   mainInput: {
     width: 260,
     height: 60,
@@ -109,7 +94,6 @@ const styles = StyleSheet.create({
     borderColor: '#F3BC2C',
     paddingLeft: 23,
   },
-
   mainBtn: {
     backgroundColor: '#F3BC2C',
     width: 157,
@@ -118,20 +102,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   mainBtnTexto: {
+    //fontFamily: '',
     fontSize: 14,
     color: '#000000'
   },
-
   mainTextoSpace: {
     marginTop: 20,
     height: 16,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-
   mainTexto: {
+    //fontFamily: '',
     fontSize: 14,
     color: '#000000'
   },

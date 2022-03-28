@@ -112,6 +112,7 @@ const styles = StyleSheet.create({
   },
 
   mainBtnTexto: {
+    //fontFamily: '',
     fontSize: 14,
     color: '#000000'
   },
@@ -123,6 +124,7 @@ const styles = StyleSheet.create({
   },
 
   mainTexto: {
+    //fontFamily: '',
     fontSize: 14,
     color: '#000000'
   },
