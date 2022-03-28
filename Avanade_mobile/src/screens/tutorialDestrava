@@ -16,8 +16,8 @@ export default class TutorialDestrava extends Component {
         <View style={styles.mainHeader}>
           <View style={styles.mainTituloSpace}>
             <TouchableOpacity onPress={this.navegarPonto}>
-              {/* <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} /> */}
-              <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} />
+              <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
+              {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} /> */}
             </TouchableOpacity>
 
             <Text style={styles.mainHeaderText}>Tutorial</Text>
