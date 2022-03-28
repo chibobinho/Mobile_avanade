@@ -13,6 +13,7 @@ import TrocaPontos from './src/screens/trocaPontos';
 import TutorialDestrava from './src/screens/tutorialDestrava';
 import TutorialTrava from './src/screens/tutorialTrava';
 import Vaga from './src/screens/vaga';
+import Cadastro from './src/screens/cadastro';
 
 const AuthStack = createStackNavigator();
 
@@ -32,6 +33,7 @@ class App extends Component {
           <AuthStack.Screen name="TutorialTrava" component={TutorialTrava} />
           <AuthStack.Screen name="TutorialDestrava" component={TutorialDestrava} />
           <AuthStack.Screen name="Vaga" component={Vaga} />
+          <AuthStack.Screen name="Cadastro" component={Cadastro} />
           <AuthStack.Screen name="Main" component={Main} />
         </AuthStack.Navigator>
       </NavigationContainer>
