@@ -11,8 +11,8 @@ export default class Perfil extends Component {
     }
   }
 
-  trocaPontos = async () => {
-    this.props.navigation.navigate('Vaga');
+  navegarPontos = async () => {
+    this.props.navigation.navigate('TrocaPontos');
   }
 
   render() {
@@ -33,7 +33,7 @@ export default class Perfil extends Component {
             <Text style={styles.mainBodyText}>Meus pontos: 15</Text>
             <Text style={styles.mainBodyText}>Saldo: R$2,00</Text>
 
-            <TouchableOpacity style={styles.btn} onPress={this.trocaPontos}>
+            <TouchableOpacity style={styles.btn} onPress={this.navegarPontos}>
               <Text style={styles.btnPontosText}>Trocar meus pontos</Text>
             </TouchableOpacity>
 
@@ -50,7 +50,7 @@ export default class Perfil extends Component {
 
 const styles = StyleSheet.create({
   main: {
-    flex: 3,
+    flex: 1,
     backgroundColor: '#fff',
   },
   mainHeader: {

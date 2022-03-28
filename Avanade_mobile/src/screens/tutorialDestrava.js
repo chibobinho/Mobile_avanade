@@ -5,6 +5,10 @@ export default class TutorialDestrava extends Component {
   goBack = () => {
     this.props.navigation.goBack();
   }
+
+  navegarPagamento = () => {
+    this.props.navigation.navigate('Pagamento');
+  }
   
   render() {
     return (
@@ -13,7 +17,6 @@ export default class TutorialDestrava extends Component {
           <View style={styles.mainTituloSpace}>
             <TouchableOpacity onPress={this.goBack}>
               <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
-              {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} /> */}
             </TouchableOpacity>
 
             <Text style={styles.mainHeaderText}>Tutorial</Text>
@@ -51,7 +54,7 @@ export default class TutorialDestrava extends Component {
         </View>
 
         <View style={styles.mainFooter}>
-          <TouchableOpacity style={[styles.mainFooterBtn, styles.footerBtnShadow]} onPress={this.travarBicicleta}>
+          <TouchableOpacity style={[styles.mainFooterBtn, styles.footerBtnShadow]} onPress={this.navegarPagamento}>
             <Text style={styles.footerBtnText}>Destravar</Text>
           </TouchableOpacity>
 

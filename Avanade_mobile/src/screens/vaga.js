@@ -5,13 +5,17 @@ export default class Vaga extends Component {
   goBack = () => {
     this.props.navigation.goBack();
   }
+
+  navegarTutorial = async () => {
+    this.props.navigation.navigate('TutorialTrava');
+  }
   
   render() {
     return (
       <View style={styles.main}>
         <View style={styles.mainHeader}>
           <View style={styles.mainTituloSpace}>
-            <TouchableOpacity style={styles.btnVoltarSpace}  onPress={this.goBack}>
+            <TouchableOpacity style={styles.btnVoltarSpace} onPress={this.goBack}>
               <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
             </TouchableOpacity>
 
@@ -26,7 +30,7 @@ export default class Vaga extends Component {
             <Text style={styles.numeroVaga}>1</Text>
           </View>
 
-          <TouchableOpacity style={styles.btnConfirmar}>
+          <TouchableOpacity style={styles.btnConfirmar} onPress={this.navegarTutorial}>
             <Text style={styles.btnConfirmarTexto}>Confirmar</Text>
           </TouchableOpacity>
         </View>
@@ -47,12 +51,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   mainTituloSpace: {
-    width: 200,
+    width: 260,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
-    marginRight: 80,
+    marginRight: 40,
   },
   mainBtnVoltar: {
     width: 20,
@@ -76,6 +80,7 @@ const styles = StyleSheet.create({
     fontSize: 34,
     /* fontFamily: 'Open Sans', */
     fontWeight: 'bold',
+    color: '#000',
     lineHeight: 39,
     maxWidth: 295,
     textAlign: 'center',
@@ -93,6 +98,7 @@ const styles = StyleSheet.create({
   },
   numeroVaga: {
     fontSize: 36,
+    color: '#000',
     /* fontFamily: 'Open Sans', */
   },
   btnConfirmar: {
@@ -107,5 +113,6 @@ const styles = StyleSheet.create({
     /* fontFamily: 'Open Sans', */
     fontWeight: 'bold',
     fontSize: 24,
+    color: '#000',
   },
 });

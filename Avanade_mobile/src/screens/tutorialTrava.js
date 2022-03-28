@@ -6,6 +6,10 @@ export default class TutorialTrava extends Component {
     this.props.navigation.goBack();
   }
 
+  travarBicicleta = () => {
+    this.props.navigation.navigate('TutorialDestrava');
+  }
+
   render() {
     return (
       <View style={styles.main}>
@@ -13,7 +17,6 @@ export default class TutorialTrava extends Component {
           <View style={styles.mainTituloSpace}>
             <TouchableOpacity onPress={this.goBack}>
               <Image style={styles.mainBtnVoltar} source={require('../../assets/img/Icone_voltar.png')} />
-              {/* <Image style={styles.mainBtnVoltar} source={require('./assets/Icone_voltar.png')} /> */}
             </TouchableOpacity>
 
             <Text style={styles.mainHeaderText}>Tutorial</Text>
@@ -164,7 +167,7 @@ const styles = StyleSheet.create({
     shadowOffset: {width: -3, height: -4},
     shadowOpacity: 1,
     shadowRadius: 4,
-    /* shadowColor: 'rgba(132, 132, 156, 0.3)',
+    /* shadowColor: '#rgba(132, 132, 156, 0.3)',
     shadowOffset: {width: 0, height: 4},
     shadowOpacity: 1,
     shadowRadius: 4, */
