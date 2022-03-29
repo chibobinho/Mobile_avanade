@@ -132,7 +132,8 @@ const styles = StyleSheet.create({
   mainTexto: {
     //fontFamily: '',
     fontSize: 14,
-    color: '#000000'
+    color: '#000000',
+    fontFamily: 'ABeeZee-Regular'
   },
 });
 
